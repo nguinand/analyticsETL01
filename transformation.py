@@ -15,10 +15,6 @@ class Transformation:
 
             # getattr function takes in function name of class and calls it.
             getattr(self, funcName)()
-        elif dataSource == 'csv':
-            self.data = extractObj.getCSVData(dataSet)
-            funcName = dataSource+dataSet
-            getattr(self, funcName)
         else:
             print('Unknown Data Source!')
 
