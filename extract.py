@@ -7,7 +7,7 @@ class Extract:
         # loading our json file here to usse it across different class methods
         self.data_sources = json.load(open('data_config.json'))
         self.api = self.data_sources['data_sources']['api']
-        self.csv_path = self.data_sources['data_sources']['csv']
+        #self.csv_path = self.data_sources['data_sources']['csv']
 
     def getAPISData(self, api_name):
         # since we have multiple API's (Pollution and Economy Data), 
@@ -17,8 +17,8 @@ class Extract:
         # response.json() will convert json data into Python dictionary.
         return response.json()
 
-    def getCSVData(self, csv_name):
-        # since we can use multiple CSV data files in future, 
-        # so will pass csv name as an argument to fetch the desired CSV data.
-        df = pandas.read_csv(self.csv_path[csv_name])
-        return df
+    # def getCSVData(self, csv_name):
+    #     # since we can use multiple CSV data files in future, 
+    #     # so will pass csv name as an argument to fetch the desired CSV data.
+    #     df = pandas.read_csv(self.csv_path[csv_name])
+    #     return df
