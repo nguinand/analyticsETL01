@@ -44,7 +44,7 @@ class MongoDB:
                 print(data)
                 print(type(data))
                 print("******************")
-                self.db[collection].insert_many(data)
+                self.db[collection].insert(data)
                 print('Data Inserted Successfully')
             except Exception as e:
                 print('ERROR Occurred2')
